@@ -54,8 +54,8 @@ function initContactLinks() {
   const email = qs("[data-email]");
 
   const defaultMsg =
-    `Olá, ${CONTACT.company}! Quero um orçamento. ` +
-    `Preciso de: (descreva aqui).`;
+    `Olá, ${CONTACT.company}! Quero automatizar minha revenda de veículos. ` +
+    `Preciso de: (ex: WhatsApp para leads, estoque/anúncios, CRM de loja).`;
 
   if (whatsapp) whatsapp.href = buildWhatsAppLink(defaultMsg);
   if (email) email.href = buildEmailLink("Orçamento — BlueSkySoft", defaultMsg);
@@ -94,4 +94,3 @@ initMenu();
 initContactLinks();
 initLeadForm();
 initYear();
-
