@@ -90,6 +90,17 @@ function initYear() {
   if (el) el.textContent = String(new Date().getFullYear());
 }
 
+function enforceHttps() {
+  const isHttp = window.location.protocol === "http:";
+  const isLocalhost = /^(localhost|127\.0\.0\.1)/i.test(window.location.hostname);
+  if (isHttp && !isLocalhost) {
+    window.location.replace(
+      `https://${window.location.hostname}${window.location.port ? "" : ""}${window.location.pathname}${window.location.search}${window.location.hash}`,
+    );
+  }
+}
+
+enforceHttps();
 initMenu();
 initContactLinks();
 initLeadForm();
