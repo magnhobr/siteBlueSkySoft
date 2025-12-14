@@ -1,7 +1,7 @@
 const CONTACT = {
   company: "BlueSkySoft",
   email: "contato@blueskysoft.com.br",
-  whatsappE164: "5599999999999",
+  whatsappE164: "5511950407441",
 };
 
 function qs(selector, root = document) {
